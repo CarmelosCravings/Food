@@ -433,14 +433,19 @@
     line-height: 2;
   }
 
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+  }
+
   .menu-showcase {
     background: var(--black-2);
     border: 1px solid rgba(201,168,76,0.2);
     padding: 3rem clamp(2rem, 5vw, 4rem);
     position: relative;
     text-align: left;
-    max-width: 700px;
-    margin: 0 auto;
   }
 
   .menu-showcase::before,
@@ -953,29 +958,59 @@
     Every engagement is designed from the ground up. Below is a glimpse into the kind of experience Carmelos Cravings delivers — elevated, intentional, and memorable.
   </p>
 
-  <div class="menu-showcase reveal">
-    <p class="menu-label">Sample Menu · Mediterranean</p>
-    <h3 class="menu-title">Lamb Experience for Two</h3>
+  <div class="menu-grid reveal">
 
-    <p class="menu-section-head">Main Course</p>
-    <div class="menu-item">Herb-Crusted Lamb Chops — rosemary, garlic, slow-finished to perfection</div>
+    <div class="menu-showcase">
+      <p class="menu-label">Sample Menu · Mediterranean</p>
+      <h3 class="menu-title">Lamb Experience for Two</h3>
 
-    <p class="menu-section-head">Sides — Select Two</p>
-    <div class="menu-item">Roasted Fingerling Potatoes</div>
-    <div class="menu-item">Grilled Eggplant</div>
-    <div class="menu-item">Zucchini & Summer Squash</div>
-    <div class="menu-item">Fresh Asparagus</div>
-    <div class="menu-item">Classic Greek Salad</div>
+      <p class="menu-section-head">Main Course</p>
+      <div class="menu-item">Herb-Crusted Lamb Chops — rosemary, garlic, slow-finished to perfection</div>
 
-    <div class="what-to-expect">
-      <p class="menu-section-head">What to Expect</p>
-      <div class="expect-grid">
-        <div class="expect-item">On-site meal preparation</div>
-        <div class="expect-item">Full kitchen setup & breakdown</div>
-        <div class="expect-item">Restaurant-quality plating</div>
-        <div class="expect-item">Complete cleanup of all areas</div>
+      <p class="menu-section-head">Sides — Select Two</p>
+      <div class="menu-item">Roasted Fingerling Potatoes</div>
+      <div class="menu-item">Grilled Eggplant</div>
+      <div class="menu-item">Zucchini & Summer Squash</div>
+      <div class="menu-item">Fresh Asparagus</div>
+      <div class="menu-item">Classic Greek Salad</div>
+
+      <div class="what-to-expect">
+        <p class="menu-section-head">What to Expect</p>
+        <div class="expect-grid">
+          <div class="expect-item">On-site meal preparation</div>
+          <div class="expect-item">Full kitchen setup & breakdown</div>
+          <div class="expect-item">Restaurant-quality plating</div>
+          <div class="expect-item">Complete cleanup of all areas</div>
+        </div>
       </div>
     </div>
+
+    <div class="menu-showcase">
+      <p class="menu-label">Sample Menu · Mediterranean</p>
+      <h3 class="menu-title">Coastal Mediterranean Fish Experience</h3>
+
+      <p class="menu-section-head">Main Course</p>
+      <div class="menu-item">Grilled Sea Bass — lemon, olive oil, capers</div>
+
+      <p class="menu-section-head">Sides — Select Two</p>
+      <div class="menu-item">Garlic Asparagus</div>
+      <div class="menu-item">Cucumber Tomato Salad</div>
+      <div class="menu-item">Charred Zucchini with Feta</div>
+    </div>
+
+    <div class="menu-showcase">
+      <p class="menu-label">Sample Menu · Mediterranean</p>
+      <h3 class="menu-title">Tiger Shrimp Mediterranean Experience</h3>
+
+      <p class="menu-section-head">Main Course</p>
+      <div class="menu-item">Grilled Tiger Shrimp — garlic butter, lemon</div>
+
+      <p class="menu-section-head">Sides — Select Two</p>
+      <div class="menu-item">Saffron Rice</div>
+      <div class="menu-item">Garlic Spinach</div>
+      <div class="menu-item">Bruschetta</div>
+    </div>
+
   </div>
 
   <p class="pullquote reveal">
