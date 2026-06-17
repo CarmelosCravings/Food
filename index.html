@@ -448,7 +448,34 @@
     position: relative;
     text-align: left;
     display: grid;
-    grid-template-rows: 5.5rem 9rem 1fr;
+    grid-template-rows: 220px 5.5rem 9rem 1fr;
+    overflow: hidden;
+  }
+
+  .menu-img-wrapper {
+    margin: -2.5rem -2.5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .menu-img-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 110px;
+    background: linear-gradient(to bottom, transparent, var(--black-2));
+    z-index: 1;
+    pointer-events: none;
+  }
+  .menu-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.78) contrast(1.08);
+    transition: transform 0.7s ease;
+  }
+  .menu-showcase:hover .menu-img {
+    transform: scale(1.04);
   }
 
   .menu-main-block {
@@ -1004,6 +1031,9 @@
   <div class="menu-grid reveal">
 
     <div class="menu-showcase">
+      <div class="menu-img-wrapper">
+        <img src="lamb.jpg" alt="Lamb Experience" class="menu-img" />
+      </div>
       <h3 class="menu-title">Lamb Experience</h3>
 
       <div class="menu-main-block">
@@ -1022,6 +1052,9 @@
     </div>
 
     <div class="menu-showcase">
+      <div class="menu-img-wrapper">
+        <img src="coastal-fish.jpg" alt="Coastal Fish Experience" class="menu-img" />
+      </div>
       <h3 class="menu-title">Coastal Fish Experience</h3>
 
       <div class="menu-main-block">
@@ -1038,6 +1071,9 @@
     </div>
 
     <div class="menu-showcase">
+      <div class="menu-img-wrapper">
+        <img src="tiger-shrimp.jpg" alt="Tiger Shrimp Experience" class="menu-img" />
+      </div>
       <h3 class="menu-title">Tiger Shrimp Experience</h3>
 
       <div class="menu-main-block">
