@@ -447,22 +447,25 @@
     padding: 2.5rem;
     position: relative;
     text-align: left;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 5.5rem 9rem 1fr;
   }
 
   .menu-main-block {
-    min-height: 9rem;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
   .menu-main-block .menu-section-head {
     margin-top: 0;
   }
 
   .menu-sides-block {
-    margin-top: auto;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(201,168,76,0.12);
+  }
+  .menu-sides-block .menu-section-head {
+    margin-top: 0;
   }
 
   .menu-showcase::before,
@@ -496,11 +499,10 @@
     font-family: 'Cinzel', serif;
     font-size: 1.4rem;
     color: var(--white);
-    margin-bottom: 2rem;
+    margin: 0;
     letter-spacing: 0.06em;
-    min-height: 3.5rem;
-    display: flex;
-    align-items: center;
+    align-self: end;
+    padding-bottom: 0.5rem;
   }
 
   .menu-item {
