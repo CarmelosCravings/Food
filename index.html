@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Carmelos Cravings â€” Private Chef Experience</title>
+<title>Carmelos Cravings — Private Chef Experience</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet" />
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -32,7 +32,7 @@
     overflow-x: hidden;
   }
 
-  /* â”€â”€â”€ NOISE TEXTURE OVERLAY â”€â”€â”€ */
+  /* ─── NOISE TEXTURE OVERLAY ─── */
   body::before {
     content: '';
     position: fixed;
@@ -43,7 +43,7 @@
     z-index: 9999;
   }
 
-  /* â”€â”€â”€ NAV â”€â”€â”€ */
+  /* ─── NAV ─── */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -93,7 +93,7 @@
   }
 
 
-  /* â”€â”€â”€ VALUE PROP â”€â”€â”€ */
+  /* ─── VALUE PROP ─── */
   #value {
     text-align: center;
     background: var(--black);
@@ -139,7 +139,7 @@
     line-height: 1.5;
   }
 
-  /* â”€â”€â”€ GOLD LINE DIVIDER â”€â”€â”€ */
+  /* ─── GOLD LINE DIVIDER ─── */
   .gold-rule {
     display: flex;
     align-items: center;
@@ -157,7 +157,7 @@
     text-transform: uppercase;
   }
 
-  /* â”€â”€â”€ HERO â”€â”€â”€ */
+  /* ─── HERO ─── */
   #hero {
     min-height: 100vh;
     display: grid;
@@ -311,7 +311,7 @@
   }
   .hero-scroll svg { width: 18px; }
 
-  /* â”€â”€â”€ SECTION BASE â”€â”€â”€ */
+  /* ─── SECTION BASE ─── */
   section {
     padding: var(--gap) 5vw;
     position: relative;
@@ -341,7 +341,7 @@
     letter-spacing: 0.04em;
   }
 
-  /* â”€â”€â”€ SERVICES â”€â”€â”€ */
+  /* ─── SERVICES ─── */
   #services {
     background: var(--black-2);
   }
@@ -422,7 +422,7 @@
     opacity: 0.4;
   }
 
-  /* â”€â”€â”€ EXPERIENCE â”€â”€â”€ */
+  /* ─── EXPERIENCE ─── */
   #experience {
     max-width: 1200px;
     margin: 0 auto;
@@ -534,7 +534,8 @@
     color: var(--white);
     margin: 0;
     letter-spacing: 0.06em;
-    align-self: end;
+    align-self: start;
+    padding-top: 1.2rem;
     padding-bottom: 1.2rem;
     border-bottom: 1px solid rgba(201,168,76,0.3);
   }
@@ -548,7 +549,7 @@
     color: var(--text);
   }
   .menu-item::before {
-    content: 'â—†';
+    content: '◆';
     color: var(--gold);
     font-size: 0.5rem;
     margin-top: 0.55rem;
@@ -611,7 +612,7 @@
     text-align: center;
   }
   .expect-item::before {
-    content: 'â—†';
+    content: '◆';
     color: var(--gold);
     font-size: 0.55rem;
   }
@@ -640,7 +641,7 @@
   .pullquote::before { top: -0.5rem; left: 0; }
   .pullquote::after  { content: '"'; bottom: -1.5rem; right: 0; }
 
-  /* â”€â”€â”€ BOOKING â”€â”€â”€ */
+  /* ─── BOOKING ─── */
   #booking {
     background: var(--black-2);
     position: relative;
@@ -717,7 +718,7 @@
     color: var(--gold-dk);
   }
 
-  /* â”€â”€â”€ TERRITORY â”€â”€â”€ */
+  /* ─── TERRITORY ─── */
   #territory {
     text-align: center;
     position: relative;
@@ -750,7 +751,7 @@
     align-items: center;
     gap: 0.5rem;
   }
-  .territory-city::before { content: 'â—†'; font-size: 0.45rem; color: var(--gold-dk); }
+  .territory-city::before { content: '◆'; font-size: 0.45rem; color: var(--gold-dk); }
 
   .territory-desc {
     max-width: 560px;
@@ -761,7 +762,7 @@
     line-height: 1.9;
   }
 
-  /* â”€â”€â”€ CONTACT â”€â”€â”€ */
+  /* ─── CONTACT ─── */
   #contact {
     background: var(--black-3);
     position: relative;
@@ -863,7 +864,7 @@
     margin-bottom: 2.5rem;
   }
 
-  /* â”€â”€â”€ FOOTER â”€â”€â”€ */
+  /* ─── FOOTER ─── */
   footer {
     text-align: center;
     padding: 2.5rem 5vw;
@@ -887,7 +888,7 @@
     text-transform: uppercase;
   }
 
-  /* â”€â”€â”€ ANIMATIONS â”€â”€â”€ */
+  /* ─── ANIMATIONS ─── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -908,7 +909,7 @@
     transform: translateY(0);
   }
 
-  /* â”€â”€â”€ RESPONSIVE â”€â”€â”€ */
+  /* ─── RESPONSIVE ─── */
   @media (max-width: 800px) {
     #hero {
       grid-template-columns: 1fr;
@@ -944,7 +945,7 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-image-wrapper">
-    <img src="chef.png" alt="Carmelos â€” Private Chef" class="hero-photo" />
+    <img src="chef.png" alt="Carmelos — Private Chef" class="hero-photo" />
   </div>
 
   <div class="hero-text">
@@ -952,7 +953,7 @@
     <h1 class="hero-name">Carmelos<br>Cravings</h1>
     <p class="hero-tagline">Where Service Meets the Art of Fine Dining</p>
     <p class="hero-bio">
-      A retired U.S. Army veteran with a lifelong passion for the culinary arts, Carmelos brings military precision, discipline, and heart to every table he sets. His story isn't just about food â€” it's about creating unforgettable moments, one meal at a time.
+      A retired U.S. Army veteran with a lifelong passion for the culinary arts, Carmelos brings military precision, discipline, and heart to every table he sets. His story isn't just about food — it's about creating unforgettable moments, one meal at a time.
     </p>
     <a class="btn-gold" href="#contact">Reserve Your Experience</a>
   </div>
@@ -972,16 +973,16 @@
       <span></span>
     </div>
     <p class="value-lead">
-      We help busy couples and families create five-star dining experiences at home â€” without the stress of cooking or cleanup.
+      We help busy couples and families create five-star dining experiences at home — without the stress of cooking or cleanup.
     </p>
     <p class="value-body">
       Most people want to host memorable dinners, and that's where Carmelos Cravings comes in. We bring a private chef directly to your home, handle everything from meal preparation to cleanup, and turn your space into a personalized dining experience.
     </p>
     <p class="value-body">
-      The result? You get to enjoy your guests, your time, and the moment â€” without lifting a finger.
+      The result? You get to enjoy your guests, your time, and the moment — without lifting a finger.
     </p>
     <p class="value-question">
-      So the question is â€” when was the last time you actually enjoyed hosting?
+      So the question is — when was the last time you actually enjoyed hosting?
     </p>
     <a class="btn-gold" href="#contact" style="margin-top:2.5rem;">Make It Happen</a>
   </div>
@@ -1008,16 +1009,16 @@
       <span class="service-icon">ðŸ’</span>
       <h3 class="service-name">Weddings</h3>
       <p class="service-desc">
-        Your wedding day deserves a dining experience that matches its magnitude. Carmelos works alongside your vision to craft a menu and service that honors the occasion â€” elegant, seamless, and deeply personal.
+        Your wedding day deserves a dining experience that matches its magnitude. Carmelos works alongside your vision to craft a menu and service that honors the occasion — elegant, seamless, and deeply personal.
       </p>
       <div class="service-corner"></div>
     </div>
 
     <div class="service-card reveal">
-      <span class="service-icon">âœ¦</span>
+      <span class="service-icon">✦</span>
       <h3 class="service-name">Private Events</h3>
       <p class="service-desc">
-        Corporate gatherings, milestone celebrations, holiday parties, and more. For groups large or small, Carmelos delivers restaurant-quality service in the venue of your choosing â€” with the detail and care of a five-star kitchen.
+        Corporate gatherings, milestone celebrations, holiday parties, and more. For groups large or small, Carmelos delivers restaurant-quality service in the venue of your choosing — with the detail and care of a five-star kitchen.
       </p>
       <div class="service-corner"></div>
     </div>
@@ -1032,7 +1033,7 @@
   </div>
 
   <p class="experience-intro reveal">
-    Every engagement is designed from the ground up. Below is a glimpse into the kind of experience Carmelos Cravings delivers â€” elevated, intentional, and memorable.
+    Every engagement is designed from the ground up. Below is a glimpse into the kind of experience Carmelos Cravings delivers — elevated, intentional, and memorable.
   </p>
 
   <div class="menu-grid reveal">
@@ -1045,11 +1046,11 @@
 
       <div class="menu-main-block">
         <p class="menu-section-head">Main Course</p>
-        <div class="menu-item">Herb-Crusted Lamb Chops â€” rosemary, garlic, slow-finished to perfection</div>
+        <div class="menu-item">Herb-Crusted Lamb Chops — rosemary, garlic, slow-finished to perfection</div>
       </div>
 
       <div class="menu-sides-block">
-        <p class="menu-section-head">Sides â€” Select Two</p>
+        <p class="menu-section-head">Sides — Select Two</p>
         <div class="menu-item">Roasted Fingerling Potatoes</div>
         <div class="menu-item">Grilled Eggplant</div>
         <div class="menu-item">Zucchini & Summer Squash</div>
@@ -1066,11 +1067,11 @@
 
       <div class="menu-main-block">
         <p class="menu-section-head">Main Course</p>
-        <div class="menu-item">Grilled Sea Bass â€” lemon, olive oil, capers</div>
+        <div class="menu-item">Grilled Sea Bass — lemon, olive oil, capers</div>
       </div>
 
       <div class="menu-sides-block">
-        <p class="menu-section-head">Sides â€” Select Two</p>
+        <p class="menu-section-head">Sides — Select Two</p>
         <div class="menu-item">Garlic Asparagus</div>
         <div class="menu-item">Cucumber Tomato Salad</div>
         <div class="menu-item">Charred Zucchini with Feta</div>
@@ -1085,11 +1086,11 @@
 
       <div class="menu-main-block">
         <p class="menu-section-head">Main Course</p>
-        <div class="menu-item">Grilled Tiger Shrimp â€” garlic butter, lemon</div>
+        <div class="menu-item">Grilled Tiger Shrimp — garlic butter, lemon</div>
       </div>
 
       <div class="menu-sides-block">
-        <p class="menu-section-head">Sides â€” Select Two</p>
+        <p class="menu-section-head">Sides — Select Two</p>
         <div class="menu-item">Saffron Rice</div>
         <div class="menu-item">Garlic Spinach</div>
         <div class="menu-item">Bruschetta</div>
@@ -1109,7 +1110,7 @@
   </div>
 
   <p class="pullquote reveal">
-    This experience is designed to be more than a meal â€” it's a moment. Memorable, intentional, and elevated.
+    This experience is designed to be more than a meal — it's a moment. Memorable, intentional, and elevated.
   </p>
 </section>
 
@@ -1126,7 +1127,7 @@
       <p class="booking-type">Private Dinners</p>
       <p class="booking-notice">20</p>
       <p class="booking-unit">Days in Advance</p>
-      <p class="booking-desc">Intimate dinners, date nights, family meals, and small celebrations â€” please allow at least 20 days to curate your perfect menu.</p>
+      <p class="booking-desc">Intimate dinners, date nights, family meals, and small celebrations — please allow at least 20 days to curate your perfect menu.</p>
     </div>
 
     <div class="booking-card reveal">
@@ -1138,7 +1139,7 @@
     </div>
 
     <div class="booking-card reveal">
-      <span class="booking-icon">âœ¦</span>
+      <span class="booking-icon">✦</span>
       <p class="booking-type">Events Â· 50+ Guests</p>
       <p class="booking-notice">6</p>
       <p class="booking-unit">Months in Advance</p>
@@ -1172,7 +1173,7 @@
   </div>
 
   <p class="territory-desc reveal">
-    Based in Gainesville, Florida, Carmelos Cravings proudly serves the greater Central Florida region. If your location isn't listed, reach out â€” travel accommodations may be arranged.
+    Based in Gainesville, Florida, Carmelos Cravings proudly serves the greater Central Florida region. If your location isn't listed, reach out — travel accommodations may be arranged.
   </p>
 </section>
 
@@ -1190,7 +1191,7 @@
       </p>
 
       <div class="contact-detail">
-        <span class="contact-detail-icon">âœ‰</span>
+        <span class="contact-detail-icon">✉</span>
         <div>
           <span class="contact-detail-label">Email</span>
           <span class="contact-detail-value">
@@ -1200,7 +1201,7 @@
       </div>
 
       <div class="contact-detail">
-        <span class="contact-detail-icon">â˜Ž</span>
+        <span class="contact-detail-icon">☎</span>
         <div>
           <span class="contact-detail-label">Phone / Text</span>
           <span class="contact-detail-value">
