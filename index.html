@@ -83,6 +83,31 @@
   }
   .nav-links a:hover { color: var(--gold); }
 
+  /* Hamburger toggle — hidden on desktop, shown on mobile */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 38px;
+    height: 38px;
+    padding: 7px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 110;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--gold);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 
   .nav-logo-img { display: flex; align-items: center; text-decoration: none; }
   .nav-logo-img-el { height: 72px; width: auto; object-fit: contain; }
@@ -935,21 +960,56 @@
 
   /* ─── RESPONSIVE ─── */
   @media (max-width: 800px) {
+    /* Mobile nav: hamburger + dropdown */
+    .nav-toggle { display: flex; }
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.6rem;
+      padding: 1.8rem 5vw 2.2rem;
+      background: rgba(8,8,8,0.98);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      backdrop-filter: blur(10px);
+      transform: translateY(-12px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .nav-links.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .nav-links a { font-size: 0.85rem; }
+
+    /* Hero stacks and centers */
     #hero {
       grid-template-columns: 1fr;
-      padding-top: 100px;
+      padding-top: 110px;
       gap: 2.5rem;
+      min-height: auto;
+      padding-bottom: var(--gap);
     }
-    .hero-image-wrapper { height: 55vw; max-height: 400px; }
-    .hero-text { padding-left: 0; }
+    .hero-image-wrapper { height: 75vw; max-height: 460px; }
+    .hero-text { padding-left: 0; text-align: center; }
+    .hero-bio { margin-left: auto; margin-right: auto; }
+
+    /* Single-column / relaxed grids */
     .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-    .menu-grid { grid-template-columns: 1fr; }
+    .menu-grid { grid-template-columns: 1fr; max-width: 460px; }
+    .menu-showcase { grid-template-rows: 200px auto auto auto; }
     .expect-grid { grid-template-columns: 1fr 1fr; }
   }
 
   @media (max-width: 520px) {
-    .nav-links { display: none; }
     .hero-name { font-size: 2.2rem; }
+    .nav-logo-img-el { height: 60px; }
+    .section-title { font-size: 1.75rem; }
+    .expect-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -958,6 +1018,9 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo-img" href="#"><img src="logo-gold.png" alt="Carmelos Cravings" class="nav-logo-img-el" /></a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -1281,6 +1344,25 @@
     });
   }, { threshold: 0.12 });
   reveals.forEach(el => observer.observe(el));
+
+  // Mobile nav toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Close the menu when a link is tapped
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 </script>
 </body>
 </html>
