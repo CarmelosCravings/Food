@@ -395,6 +395,8 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.4s ease;
+    display: flex;
+    flex-direction: column;
   }
   .service-card:hover { transform: translateY(-4px); }
   .service-card::before {
@@ -440,6 +442,29 @@
     border-right: 1px solid var(--gold-dk);
     border-bottom: 1px solid var(--gold-dk);
     opacity: 0.4;
+  }
+
+  .service-lead {
+    margin-top: auto;
+    padding-top: 1.6rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-dk);
+  }
+  .service-lead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold-dk);
+    opacity: 0.5;
+    margin-bottom: 1.6rem;
+  }
+  .service-lead span {
+    color: var(--gold-lt);
+    font-weight: 600;
   }
 
   /* ─── EXPERIENCE ─── */
@@ -1025,7 +1050,6 @@
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#booking">Booking</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -1090,7 +1114,7 @@
       <p class="service-desc">
         An intimate, in-home culinary experience crafted for you. Carmelos arrives, sets up, cooks, plates with restaurant-quality precision, and leaves your kitchen spotless. From romantic evenings for two to family celebrations, every meal is a moment.
       </p>
-      <div class="service-corner"></div>
+      <p class="service-lead">Reserve <span>20+ Days</span> in Advance</p>
     </div>
 
     <div class="service-card reveal">
@@ -1099,7 +1123,7 @@
       <p class="service-desc">
         Your intimate wedding deserves a dining experience as special as the day itself. Carmelos works alongside your vision to craft a menu and service that honors the occasion — elegant, seamless, and deeply personal.
       </p>
-      <div class="service-corner"></div>
+      <p class="service-lead">Reserve <span>Up to 1 Year</span> in Advance</p>
     </div>
 
     <div class="service-card reveal">
@@ -1108,9 +1132,13 @@
       <p class="service-desc">
         Corporate gatherings, milestone celebrations, holiday parties, and more. For groups large or small, Carmelos delivers restaurant-quality service in the venue of your choosing — with the detail and care of a five-star kitchen.
       </p>
-      <div class="service-corner"></div>
+      <p class="service-lead">Reserve <span>3–6 Months</span> in Advance</p>
     </div>
   </div>
+
+  <p class="booking-note reveal">
+    Every booking includes a personalized consultation to design your menu, timeline, and service flow. Lead times are guidelines — reach out anytime and we'll do our best to accommodate your date.
+  </p>
 </section>
 
 <!-- EXPERIENCE -->
@@ -1199,44 +1227,6 @@
 
   <p class="pullquote reveal">
     This experience is designed to be more than a meal — it's a moment. Memorable, intentional, and elevated.
-  </p>
-</section>
-
-<!-- BOOKING -->
-<section id="booking">
-  <div class="section-header reveal">
-    <span class="section-label">Plan Ahead</span>
-    <h2 class="section-title">Booking Guidelines</h2>
-  </div>
-
-  <div class="booking-grid">
-    <div class="booking-card reveal">
-      <span class="booking-icon">🕯️</span>
-      <p class="booking-type">Private Dinners</p>
-      <p class="booking-notice">20</p>
-      <p class="booking-unit">Days in Advance</p>
-      <p class="booking-desc">Intimate dinners, date nights, family meals, and small celebrations — please allow at least 20 days to curate your perfect menu.</p>
-    </div>
-
-    <div class="booking-card reveal">
-      <span class="booking-icon">💍</span>
-      <p class="booking-type">Small Weddings</p>
-      <p class="booking-notice">1</p>
-      <p class="booking-unit">Year in Advance</p>
-      <p class="booking-desc">Your small wedding deserves the highest level of attention. Reserve Carmelos services well in advance to ensure full planning and personalization.</p>
-    </div>
-
-    <div class="booking-card reveal">
-      <span class="booking-icon">✦</span>
-      <p class="booking-type">Events · 50+ Guests</p>
-      <p class="booking-notice">6</p>
-      <p class="booking-unit">Months in Advance</p>
-      <p class="booking-desc">Large-scale events require extensive coordination. For gatherings of 50 or more, please reach out at least six months before your event date.</p>
-    </div>
-  </div>
-
-  <p class="booking-note reveal">
-    All bookings include a personalized consultation to design your menu, timeline, and service flow.
   </p>
 </section>
 
